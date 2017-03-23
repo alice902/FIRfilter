@@ -22,7 +22,7 @@ MCBSP_enableXmt(hMcbsp1);
 IER|=0x2000;						
 }
 
-void przerwanie_lcv()
+void rcv_interrupt()
 {
 probka = MCBSP_read(hMcbsp1);
 sample_r = sample & MASK_LO;
