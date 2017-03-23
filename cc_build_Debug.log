@@ -1,0 +1,16 @@
+-----------------------------  test1.pjt - Debug  -----------------------------
+[abc.cdb] "C:\ti3\plugins\bios\gconfgen" abc.cdb
+
+[abc.c] "C:\ti3\C6000\cgtools\bin\cl6x" -g -o2 -fr"D:/filtrFIR/Debug" -d"_DEBUG" -mv6700 -@"Debug.lkf" "abc.c"
+"fir.h", line 13: warning: last line of file ends without a newline
+"abc.c", line 44: warning: last line of file ends without a newline
+
+[abccfg.s62] "C:\ti3\C6000\cgtools\bin\cl6x" -g -o2 -fr"D:/filtrFIR/Debug" -d"_DEBUG" -mv6700 -@"Debug.lkf" "abccfg.s62"
+
+[abccfg_c.c] "C:\ti3\C6000\cgtools\bin\cl6x" -g -o2 -fr"D:/filtrFIR/Debug" -d"_DEBUG" -mv6700 -@"Debug.lkf" "abccfg_c.c"
+
+[Linking...] "C:\ti3\C6000\cgtools\bin\cl6x" -@"Debug.lkf"
+<Linking>
+
+Build Complete,
+  0 Errors, 2 Warnings, 0 Remarks.

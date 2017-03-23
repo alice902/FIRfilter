@@ -1,0 +1,5 @@
+-z -c -m"./Debug/test1.map" -o"./Debug/test1.out" -w -x -i"C:/ti3/C6000/dsk6713/lib" -i"C:/ti3/c6000/bios/lib" -i"C:/ti3/C6000/rtdx/lib" -i"C:/ti3/c6000/xdais/lib" -i"C:/ti3/C6000/cgtools/lib"
+"D:\filtrFIR\abccfg.cmd"
+"D:\filtrFIR\Debug\abc.obj"
+"D:\filtrFIR\Debug\abccfg.obj"
+"D:\filtrFIR\Debug\abccfg_c.obj"
