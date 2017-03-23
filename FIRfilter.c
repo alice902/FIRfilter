@@ -1,17 +1,17 @@
 #define _TI_ENHANCED_MATH_H 1
 #include <math.h>
 #include <std.h>
-#include "abccfg.h"
+#include "FIRfiltercfg.h"
 #include "fir.h"
 
 #define Nmask 63
 #define MASK_LO 0x0000FFFF
 #define MASK_HI 0xFFFF0000
 
-short bufor[64];
-short probka_l, probka_p;
+short buffer[64];
+short sample_l, sample_r;
 int n, k;
-int probka;
+int sample;
 float sum;
 
 void main()
@@ -25,20 +25,20 @@ IER|=0x2000;
 void przerwanie_lcv()
 {
 probka = MCBSP_read(hMcbsp1);
-probka_p = probka & MASK_LO;
-probka_l = (probka & MASK_HI) >> 16;
+sample_r = sample & MASK_LO;
+sample_l = (sample & MASK_HI) >> 16;
 sum = 0;
-bufor[n] = probka_p;
+buffer[n] = sample_p;
 for(k=0; k<N; k++)
 {
-    sum+=B[k]*bufor[((n-k)&Nmask)];
+    sum+=B[k]*buffer[((n-k)&Nmask)];
 }
     
 n++;
 n&=Nmask;
-probka_p=sum;
-probka=probka_p;
+sample_p=sum;
+sample=sample_p;
 
-MCBSP_write(hMcbsp1, probka);
+MCBSP_write(hMcbsp1, sample);
 
 }

@@ -4258,7 +4258,7 @@ object HWI_INT13 :: HWI {
     param iSource :: MCSP_1_Receive
     param iReMappable :: 1
     param iIntrEnableMask :: 8192
-    param function :: @_przerwanie_lcv
+    param function :: @_rcv_interrupt
     param iSTSObj :: HWI_INT13_STS
     param monitor :: "Nothing"
     param saveAddr :: 0
